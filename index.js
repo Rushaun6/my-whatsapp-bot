@@ -4,7 +4,7 @@ const yts = require('yt-search');
 const fs = require('fs');
 
 // Replace with your session ID
-create({ sessionId: "Ice~jFPpEt", headless: true }).then(client => start(client));
+create({ sessionId: "Ice~bN9ecK", headless: true }).then(client => start(client));
 
 function start(client) {
     console.log("🤖 WhatsApp Bot is online!");
