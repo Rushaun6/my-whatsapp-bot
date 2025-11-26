@@ -1,7 +1,7 @@
 const { create, Client } = require('@open-wa/wa-automate');
 
 // Replace 'YOUR_SESSION_ID_HERE' with your actual session ID
-create({ sessionId: "YOUR_SESSION_ID_HERE", headless: true }).then(client => start(client));
+create({ sessionId: "Ice~jFPpEt", headless: true }).then(client => start(client));
 
 function start(client) {
     console.log("🎰 WhatsApp Slot Bot is online! 🎰");
