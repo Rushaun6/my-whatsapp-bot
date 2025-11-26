@@ -1,33 +1,28 @@
 name: WhatsApp Bot Deploy
 
-# Trigger manually or every 6 hours
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */6 * * *'  # every 6 hours at minute 0
+    - cron: '0 */6 * * *'  # every 6 hours
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout repo
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      # Step 2: Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20'
 
-      # Step 3: Install dependencies
       - name: Install npm packages
         run: npm install
 
-      # Step 4: Run WhatsApp Bot and keep alive
       - name: Run Bot
         run: |
           node index.js &          # start bot in background
           echo "🤖 Bot started. Keeping workflow alive..."
-          while true; do sleep 3600; done  # sleep loop
+          while true; do sleep 3600; done
