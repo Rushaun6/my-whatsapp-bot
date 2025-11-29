@@ -1,14 +1,14 @@
 {
-  "name": "whatsapp-bot",
+  "name": "my-whatsapp-bot",
   "version": "1.0.0",
-  "description": "WhatsApp bot with slots, admin commands, and YouTube search",
+  "description": "WhatsApp bot using session ID login",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
     "@open-wa/wa-automate": "^4.76.0",
-    "ytdl-core": "^4.11.0",
-    "yt-search": "^2.10.6"
+    "axios": "^1.6.3"
   }
 }
